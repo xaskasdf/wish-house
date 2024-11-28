@@ -1,0 +1,156 @@
+/* Estilo General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Cabecera */
+header {
+    background: linear-gradient(90deg, #00FFFF, #9B30FF);
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: glow 3s infinite alternate;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+    color: #FFF;
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #9B30FF;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #ddd;
+}
+
+/* Contenedor Principal */
+main {
+    padding: 2em;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    align-items: start;
+}
+
+/* Proyectos */
+.project {
+    background: #222;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: projectEntry 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, #222, #444);
+}
+
+.project-thumbnail {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.project h2 {
+    color: #00FFFF;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.project p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: #00FF7F;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.project a:hover {
+    background: #32CD32;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00FFFF, 0 0 20px #9B30FF;
+    }
+    to {
+        text-shadow: 0 0 15px #00FF7F, 0 0 25px #32CD32;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00FFFF;
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px #9B30FF;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00FFFF;
+    }
+}
+
+@keyframes projectEntry {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #000;
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
