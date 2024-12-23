@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Carreras</title>
+    <style>
+        /* Estilos básicos */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+        #gameCanvas {
+            display: block;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<audio id="backgroundMusic" src="static/driveAway/music.mp3" autoplay loop></audio>
+<!-- Lienzo del juego -->
+<canvas id="gameCanvas"></canvas>
+
+<!-- Script principal -->
+<script src="scripts/driveAway.js"></script>
+</body>
+</html>
